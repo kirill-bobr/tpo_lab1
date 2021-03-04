@@ -7,7 +7,7 @@ public class FunctionCalculator {
             throw new IllegalArgumentException("|X| must be <= 1");
         }
 
-        int countN = 150;
+        int countN = 140;
         double sum = 0;
 
         for (int i = 1; i < countN; i++) {
