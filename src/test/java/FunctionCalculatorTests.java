@@ -1,4 +1,3 @@
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -10,7 +9,7 @@ public class FunctionCalculatorTests {
 
 
     private static FunctionCalculator functionCalculator;
-    private final double delta = 0.002;
+    private final double DELTA = 0.002;
 
     @BeforeAll
     static void setUp() {
@@ -20,19 +19,19 @@ public class FunctionCalculatorTests {
     @ParameterizedTest
     @CsvFileSource(resources = "/neg_values.csv")
     public void testNegativeValues(double value) {
-        Assertions.assertEquals(Math.atan(value), functionCalculator.calculateArctangent(value), delta);
+        Assertions.assertEquals(Math.atan(value), functionCalculator.calculateArctangent(value), DELTA);
     }
 
     @ParameterizedTest
     @CsvFileSource(resources = "/pos_values.csv")
     public void testPositiveValues(double value) {
-        Assertions.assertEquals(Math.atan(value), functionCalculator.calculateArctangent(value), delta);
+        Assertions.assertEquals(Math.atan(value), functionCalculator.calculateArctangent(value), DELTA);
     }
 
     @ParameterizedTest
     @ValueSource(doubles = {-1, 0, 1})
     public void testBoundaryValues(double value) {
-        Assertions.assertEquals(Math.atan(value), functionCalculator.calculateArctangent(value), delta);
+        Assertions.assertEquals(Math.atan(value), functionCalculator.calculateArctangent(value), DELTA);
     }
 
     @Test

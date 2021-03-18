@@ -1,7 +1,7 @@
 public class FunctionCalculator {
     
     // x - x^3/3 + x^5/5 - x^7/7 + ... + (-1)^(n-1)*x^(2n-1)/(2n-1) - ...
-    public double calculateArctangent(double x) throws IllegalArgumentException {
+    public double calculateArctangent(double x) {
 
         if (Math.abs(x) > 1) {
             throw new IllegalArgumentException("|X| must be <= 1");

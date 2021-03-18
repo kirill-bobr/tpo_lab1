@@ -1,4 +1,4 @@
-package DomainModel;
+package model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,12 +6,12 @@ import java.util.List;
 public class Room {
 
     private String name;
-    private String description;
+    private boolean isHuge;
     private List<Aeromobile> aeromobileList;
 
-    public Room(String name, String description, List<Aeromobile> aeromobileList) {
+    public Room(String name, boolean isHuge, List<Aeromobile> aeromobileList) {
         this.name = name;
-        this.description = description;
+        this.isHuge = isHuge;
 
         if (aeromobileList != null) {
             this.aeromobileList = aeromobileList;
@@ -20,12 +20,12 @@ public class Room {
         }
     }
 
-    public String getName() {
-        return name;
+    public boolean isHuge() {
+        return isHuge;
     }
 
-    public String getDescription() {
-        return description;
+    public String getName() {
+        return name;
     }
 
     public List<Aeromobile> getAeromobileList() {

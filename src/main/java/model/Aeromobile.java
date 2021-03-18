@@ -1,4 +1,4 @@
-package DomainModel;
+package model;
 
 public class Aeromobile {
 
